@@ -1,0 +1,3 @@
+/home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/chess_for_luxoft.dir
+/home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/edit_cache.dir
