@@ -37,7 +37,10 @@ void Match::run(CommandInput& commandInput)
     while (currentCommand != FINISH)
     {
         if (currentCommand == MOVE)
-            chessBoard.move();
+        {
+            chessBoard.move(commandInput.get_coordinates());
+            chessBoard.print();
+        }
         else if (currentCommand == SAVE)
         {
             cout << "Enter the file name to save" << endl;

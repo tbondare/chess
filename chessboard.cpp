@@ -4,6 +4,9 @@
 
 #include "chessboard.hpp"
 #include <memory>
+#include <iostream>
+
+using namespace std;
 
 void ChessBoard::set_first_or_last_row(int rowIndex)
 {
@@ -67,7 +70,31 @@ void ChessBoard::print()
 }
 
 Color ChessBoard::check_whose_move()
-{}
+{
+    return (nextPlayer);
+}
 
-void ChessBoard::move()
-{}
+void ChessBoard::move(Coordinates coordinates)
+{
+    auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
+    auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+    if (cellFrom.piece)
+    {
+        auto result = cellFrom.piece->check_move(table, coordinates);
+        if (result == STEP)
+        {
+            cellTo.color = cellFrom.color;
+            cellFrom.piece.swap(cellTo.piece);
+        }
+        else if (result == KILL)
+        {
+            cellTo.piece = cellFrom.piece;
+            cellTo.color = cellFrom.color;
+            cellFrom.piece = nullptr;
+        }
+        else
+            cout << "It is not valid move" << endl;
+    }
+    else
+        cout << "It is empty cell" << endl;
+}

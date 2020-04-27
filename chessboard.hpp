@@ -6,24 +6,17 @@
 #define CHESS_CHESSBOARD_HPP
 
 #include <iostream>
-#include <vector>
 #include "Chessman.hpp"
-#include <memory>
+#include "CommandInput.hpp"
+#include "Structures.hpp"
 
 using namespace std;
-enum Color {WHITE, BLACK};
-
-struct Cell
-{
-    Color color;
-    shared_ptr <Chessman> piece;
-};
 
 class ChessBoard
 {
 public:
     void create();
-    void move();
+    void move(Coordinates coordinates);
     void check_mate()
     {
 

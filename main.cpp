@@ -13,7 +13,7 @@ int main()
             if(match.load())
                 match.run(commandInput);
         }
-        else
+        else if (currentCommand == START)
         {
             match.start();
             match.run(commandInput);
