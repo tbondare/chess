@@ -4,9 +4,11 @@
 #include <iostream>
 using namespace std;
 
+void check_pawn();
+
 int main()
 {
-
+    check_pawn();
     return 0;
 }
 

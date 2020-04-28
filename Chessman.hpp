@@ -10,7 +10,7 @@
 #include <iostream>
 
 using namespace std;
-enum MoveType {STEP, KILL, INVALID};
+enum MoveType {STEP, KILL, INVALID, SHAH, MATE};
 
 class Chessman
 {
@@ -27,6 +27,67 @@ public:
     {
         cout << 'R';
     }
+    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    {
+        auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
+        auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+        int stepX = coordinates.to_x - coordinates.from_x;
+        int stepY = coordinates.to_y - coordinates.from_y;
+        if (stepX == 0 && stepY != 0)
+        {
+            if (stepY < 0)
+            {
+                for (int i = coordinates.from_y - 1; i > coordinates.to_y ; i--)
+                {
+                    if (table[coordinates.from_x][i].piece)
+                        return INVALID;
+                }
+            }
+            else
+            {
+                for (int i = coordinates.from_y + 1; i < coordinates.to_y ; i++)
+                {
+                    if (table[coordinates.from_x][i].piece)
+                        return INVALID;
+                }
+            }
+            if (cellTo.piece)
+            {
+                if (cellTo.color == cellFrom.color)
+                    return INVALID;
+                return KILL;
+            }
+            return STEP;
+        }
+        else if (stepY == 0 && stepX != 0)
+        {
+            if (stepX < 0)
+            {
+                for (int i = coordinates.from_x - 1; i > coordinates.to_x ; i--)
+                {
+                    if (table[i][coordinates.from_y].piece)
+                        return INVALID;
+                }
+            }
+            else
+            {
+                for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                {
+                    if (table[i][coordinates.from_y].piece)
+                        return INVALID;
+                }
+            }
+            if (cellTo.piece)
+            {
+                if (cellTo.color == cellFrom.color)
+                    return INVALID;
+                return KILL;
+            }
+            return STEP;
+        }
+        else
+            return INVALID;
+    }
 };
 
 class Knight : public Chessman
@@ -35,6 +96,22 @@ public:
     void print_letter() override
     {
         cout << 'N';
+    }
+    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    {
+        auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
+        auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+        int stepX = coordinates.to_x - coordinates.from_x;
+        int stepY = coordinates.to_y - coordinates.from_y;
+        if (!((abs(stepX) == 1 && abs(stepY) == 2) || (abs(stepX) == 2 && abs(stepY) == 1)))
+            return INVALID;
+        if (cellTo.piece)
+        {
+            if (cellTo.color == cellFrom.color)
+                return INVALID;
+            return KILL;
+        }
+        return STEP;
     }
 };
 
@@ -45,6 +122,60 @@ public:
     {
         cout << 'B';
     }
+    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    {
+        auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
+        auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+        int stepX = coordinates.to_x - coordinates.from_x;
+        int stepY = coordinates.to_y - coordinates.from_y;
+        if (abs(stepX) != abs(stepY))
+            return INVALID;
+        if (stepX < 0 && stepY < 0)
+        {
+            for (int i = coordinates.from_x - 1; i > coordinates.to_x ; i--)
+            {
+                if (table[i][i].piece)
+                    return INVALID;
+            }
+        }
+        else if (stepX > 0 && stepY > 0)
+        {
+            for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+            {
+                if (table[i][i].piece)
+                    return INVALID;
+            }
+        }
+        else if (stepX > 0 && stepY < 0)
+        {
+            for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+            {
+                for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
+                {
+                    if (table[i][j].piece)
+                        return INVALID;
+                }
+            }
+        }
+        else if (stepX < 0 && stepY > 0)
+        {
+            for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
+            {
+                for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                {
+                    if (table[j][i].piece)
+                        return INVALID;
+                }
+            }
+        }
+        if (cellTo.piece)
+        {
+            if (cellTo.color == cellFrom.color)
+                return INVALID;
+            return KILL;
+        }
+        return STEP;
+    }
 };
 
 class King : public Chessman
@@ -54,6 +185,22 @@ public:
     {
         cout << 'K';
     }
+    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    {
+        auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
+        auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+        int stepX = coordinates.to_x - coordinates.from_x;
+        int stepY = coordinates.to_y - coordinates.from_y;
+        if (abs(stepX) != 1 || abs(stepY) != 1)
+            return INVALID;
+        if (cellTo.piece)
+        {
+            if (cellTo.color == cellFrom.color)
+                return INVALID;
+            return KILL;
+        }
+        return STEP;
+    }
 };
 
 class Queen : public Chessman
@@ -62,6 +209,115 @@ public:
     void print_letter() override
     {
         cout << 'Q';
+    }
+    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    {
+        auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
+        auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+        int stepX = coordinates.to_x - coordinates.from_x;
+        int stepY = coordinates.to_y - coordinates.from_y;
+        if (abs(stepX) == abs(stepY))
+        {
+            if (stepX < 0 && stepY < 0)
+            {
+                for (int i = coordinates.from_x - 1; i > coordinates.to_x ; i--)
+                {
+                    if (table[i][i].piece)
+                        return INVALID;
+                }
+            }
+            else if (stepX > 0 && stepY > 0)
+            {
+                for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                {
+                    if (table[i][i].piece)
+                        return INVALID;
+                }
+            }
+            else if (stepX > 0 && stepY < 0)
+            {
+                for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                {
+                    for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
+                    {
+                        if (table[i][j].piece)
+                            return INVALID;
+                    }
+                }
+            }
+            else if (stepX < 0 && stepY > 0)
+            {
+                for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
+                {
+                    for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                    {
+                        if (table[j][i].piece)
+                            return INVALID;
+                    }
+                }
+            }
+            if (cellTo.piece)
+            {
+                if (cellTo.color == cellFrom.color)
+                    return INVALID;
+                return KILL;
+            }
+            return STEP;
+        }
+        else if (stepX == 0 && stepY != 0)
+        {
+            if (stepY < 0)
+            {
+                for (int i = coordinates.from_y - 1; i > coordinates.to_y ; i--)
+                {
+                    if (table[coordinates.from_x][i].piece)
+                        return INVALID;
+                }
+            }
+            else
+            {
+                for (int i = coordinates.from_y + 1; i < coordinates.to_y ; i++)
+                {
+                    if (table[coordinates.from_x][i].piece)
+                        return INVALID;
+                }
+            }
+            if (cellTo.piece)
+            {
+                if (cellTo.color == cellFrom.color)
+                    return INVALID;
+                return KILL;
+            }
+            return STEP;
+        }
+        else if (stepY == 0 && stepX != 0)
+        {
+            if (stepX < 0)
+            {
+                for (int i = coordinates.from_x - 1; i > coordinates.to_x ; i--)
+                {
+                    if (table[i][coordinates.from_y].piece)
+                        return INVALID;
+                }
+            }
+            else
+            {
+                for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                {
+                    if (table[i][coordinates.from_y].piece)
+                        return INVALID;
+                }
+            }
+            if (cellTo.piece)
+            {
+                if (cellTo.color == cellFrom.color)
+                    return INVALID;
+                return KILL;
+            }
+            return STEP;
+        }
+        else
+            return INVALID;
     }
 };
 

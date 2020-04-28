@@ -22,8 +22,8 @@ struct Cell
 struct Coordinates
 {
     int from_x;
-    int to_x;
     int from_y;
+    int to_x;
     int to_y;
 };
 

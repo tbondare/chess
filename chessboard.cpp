@@ -78,9 +78,16 @@ void ChessBoard::move(Coordinates coordinates)
 {
     auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
     auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+    auto memFrom = cellFrom;
+    auto memTo = cellTo;
     if (cellFrom.piece)
     {
         auto result = cellFrom.piece->check_move(table, coordinates);
+        if (result == INVALID)
+        {
+            cout << "It is not valid move" << endl;
+            return;
+        }
         if (result == STEP)
         {
             cellTo.color = cellFrom.color;
@@ -92,9 +99,48 @@ void ChessBoard::move(Coordinates coordinates)
             cellTo.color = cellFrom.color;
             cellFrom.piece = nullptr;
         }
-        else
-            cout << "It is not valid move" << endl;
+        MoveType checkShah = check_shah(coordinates);
+        if (checkShah == SHAH)
+        {
+            cellTo = memTo;
+            cellFrom = memFrom;
+            cout << "It is shah" << endl;
+            return;
+        }
+        else if (checkShah == MATE)
+            cout << "Checkmate. Game over" << endl;
     }
     else
         cout << "It is empty cell" << endl;
 }
+
+MoveType ChessBoard::check_shah(Coordinates coordinates)
+{
+    auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
+    auto& cellTo = table[coordinates.to_x][coordinates.to_y];
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 8; j++)
+        {
+            if (table[i][j].color == cellFrom.color)
+            {
+                int countShah = 0;
+                if (cellFrom.piece->check_move(table, coordinates) == KILL)
+                    countShah++;
+                if (countShah > 2)
+                    return MATE;
+                else if (countShah != 0)
+                    return SHAH;
+            }
+        }
+        return STEP;
+    }
+}
+
+void ChessBoard::create_clean_board()
+{
+    table.resize(8);
+    for (int i = 0; i < 8; i++)
+        table[i].resize(8);
+}
+

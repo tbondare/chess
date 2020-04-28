@@ -35,6 +35,14 @@ public:
     {
 
     }
+    void create_clean_board();
+    template <typename T>
+    void put_chessman(int x, int y, shared_ptr <T> piece, Color color)
+    {
+        table[x][y].piece = dynamic_pointer_cast <Chessman> (piece);
+        table[x][y].color = color;
+    }
+    MoveType check_shah(Coordinates coordinates);
 private:
     void set_first_or_last_row(int rowIndex);
 
