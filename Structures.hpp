@@ -21,6 +21,26 @@ struct Cell
 
 struct Coordinates
 {
+    Coordinates(){}
+    Coordinates(string command)
+    {
+        if ((command[0] >= 'a' && command[0] <= 'h') && (command[3] >= 'a' && command[3] <= 'h')
+            && (command[1] >= '1' && command[1] <= '8') && (command[4] >= '1' && command[4] <= '8'))
+        {
+            from_x = command[0] - 'a';
+            to_x = command[3] - 'a';
+            from_y = command[1] - '1';
+            to_y = command[4] - '1';
+        }
+        else
+            throw runtime_error ("Wrong coordinates string");
+    }
+    Coordinates (int from_x, int from_y, int to_x, int to_y)
+        : from_x(from_x)
+        , from_y(from_y)
+        , to_x(to_x)
+        , to_y(to_y)
+        {}
     int from_x;
     int from_y;
     int to_x;

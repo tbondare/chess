@@ -152,6 +152,33 @@ __/chessboard.cpp.s:
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.s
 .PHONY : __/chessboard.cpp.s
 
+test_knight.o: test_knight.cpp.o
+
+.PHONY : test_knight.o
+
+# target to build an object file
+test_knight.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o
+.PHONY : test_knight.cpp.o
+
+test_knight.i: test_knight.cpp.i
+
+.PHONY : test_knight.i
+
+# target to preprocess a source file
+test_knight.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.i
+.PHONY : test_knight.cpp.i
+
+test_knight.s: test_knight.cpp.s
+
+.PHONY : test_knight.s
+
+# target to generate assembly for a file
+test_knight.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.s
+.PHONY : test_knight.cpp.s
+
 test_pawn.o: test_pawn.cpp.o
 
 .PHONY : test_pawn.o
@@ -178,6 +205,33 @@ test_pawn.s: test_pawn.cpp.s
 test_pawn.cpp.s:
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_pawn.cpp.s
 .PHONY : test_pawn.cpp.s
+
+test_rook.o: test_rook.cpp.o
+
+.PHONY : test_rook.o
+
+# target to build an object file
+test_rook.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_rook.cpp.o
+.PHONY : test_rook.cpp.o
+
+test_rook.i: test_rook.cpp.i
+
+.PHONY : test_rook.i
+
+# target to preprocess a source file
+test_rook.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_rook.cpp.i
+.PHONY : test_rook.cpp.i
+
+test_rook.s: test_rook.cpp.s
+
+.PHONY : test_rook.s
+
+# target to generate assembly for a file
+test_rook.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_rook.cpp.s
+.PHONY : test_rook.cpp.s
 
 unit_tests.o: unit_tests.cpp.o
 
@@ -218,9 +272,15 @@ help:
 	@echo "... __/chessboard.o"
 	@echo "... __/chessboard.i"
 	@echo "... __/chessboard.s"
+	@echo "... test_knight.o"
+	@echo "... test_knight.i"
+	@echo "... test_knight.s"
 	@echo "... test_pawn.o"
 	@echo "... test_pawn.i"
 	@echo "... test_pawn.s"
+	@echo "... test_rook.o"
+	@echo "... test_rook.i"
+	@echo "... test_rook.s"
 	@echo "... unit_tests.o"
 	@echo "... unit_tests.i"
 	@echo "... unit_tests.s"

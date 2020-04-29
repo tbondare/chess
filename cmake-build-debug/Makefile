@@ -271,6 +271,33 @@ match.cpp.s:
 	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/match.cpp.s
 .PHONY : match.cpp.s
 
+unit_tests/test_knight.o: unit_tests/test_knight.cpp.o
+
+.PHONY : unit_tests/test_knight.o
+
+# target to build an object file
+unit_tests/test_knight.cpp.o:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/unit_tests/test_knight.cpp.o
+.PHONY : unit_tests/test_knight.cpp.o
+
+unit_tests/test_knight.i: unit_tests/test_knight.cpp.i
+
+.PHONY : unit_tests/test_knight.i
+
+# target to preprocess a source file
+unit_tests/test_knight.cpp.i:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/unit_tests/test_knight.cpp.i
+.PHONY : unit_tests/test_knight.cpp.i
+
+unit_tests/test_knight.s: unit_tests/test_knight.cpp.s
+
+.PHONY : unit_tests/test_knight.s
+
+# target to generate assembly for a file
+unit_tests/test_knight.cpp.s:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/unit_tests/test_knight.cpp.s
+.PHONY : unit_tests/test_knight.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -296,6 +323,9 @@ help:
 	@echo "... match.o"
 	@echo "... match.i"
 	@echo "... match.s"
+	@echo "... unit_tests/test_knight.o"
+	@echo "... unit_tests/test_knight.i"
+	@echo "... unit_tests/test_knight.s"
 .PHONY : help
 
 

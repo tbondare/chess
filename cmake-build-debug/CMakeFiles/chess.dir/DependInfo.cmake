@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tanya/CLionProjects/chess/chessboard.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/chessboard.cpp.o"
   "/home/tanya/CLionProjects/chess/main.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/main.cpp.o"
   "/home/tanya/CLionProjects/chess/match.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/match.cpp.o"
+  "/home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/unit_tests/test_knight.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

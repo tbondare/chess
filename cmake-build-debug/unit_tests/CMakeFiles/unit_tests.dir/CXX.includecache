@@ -26,14 +26,6 @@ vector
 memory
 -
 
-/home/tanya/CLionProjects/chess/chessboard.cpp
-chessboard.hpp
-/home/tanya/CLionProjects/chess/chessboard.hpp
-memory
--
-iostream
--
-
 /home/tanya/CLionProjects/chess/chessboard.hpp
 iostream
 -
@@ -44,7 +36,7 @@ CommandInput.hpp
 Structures.hpp
 /home/tanya/CLionProjects/chess/Structures.hpp
 
-/home/tanya/CLionProjects/chess/unit_tests/test_pawn.cpp
+/home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp
 ../chessboard.hpp
 /home/tanya/CLionProjects/chess/chessboard.hpp
 

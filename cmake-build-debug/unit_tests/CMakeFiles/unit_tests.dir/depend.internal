@@ -7,11 +7,23 @@ unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.o
  /home/tanya/CLionProjects/chess/Structures.hpp
  /home/tanya/CLionProjects/chess/chessboard.cpp
  /home/tanya/CLionProjects/chess/chessboard.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o
+ /home/tanya/CLionProjects/chess/Chessman.hpp
+ /home/tanya/CLionProjects/chess/CommandInput.hpp
+ /home/tanya/CLionProjects/chess/Structures.hpp
+ /home/tanya/CLionProjects/chess/chessboard.hpp
+ /home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp
 unit_tests/CMakeFiles/unit_tests.dir/test_pawn.cpp.o
  /home/tanya/CLionProjects/chess/Chessman.hpp
  /home/tanya/CLionProjects/chess/CommandInput.hpp
  /home/tanya/CLionProjects/chess/Structures.hpp
  /home/tanya/CLionProjects/chess/chessboard.hpp
  /home/tanya/CLionProjects/chess/unit_tests/test_pawn.cpp
+unit_tests/CMakeFiles/unit_tests.dir/test_rook.cpp.o
+ /home/tanya/CLionProjects/chess/Chessman.hpp
+ /home/tanya/CLionProjects/chess/CommandInput.hpp
+ /home/tanya/CLionProjects/chess/Structures.hpp
+ /home/tanya/CLionProjects/chess/chessboard.hpp
+ /home/tanya/CLionProjects/chess/unit_tests/test_rook.cpp
 unit_tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.o
  /home/tanya/CLionProjects/chess/unit_tests/unit_tests.cpp

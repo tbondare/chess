@@ -161,7 +161,14 @@
 		<Unit filename="/home/tanya/CLionProjects/chess/match.hpp">
 			<Option target="chess"/>
 		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp">
+			<Option target="chess"/>
+			<Option target="unit_tests"/>
+		</Unit>
 		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/test_pawn.cpp">
+			<Option target="unit_tests"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/test_rook.cpp">
 			<Option target="unit_tests"/>
 		</Unit>
 		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/unit_tests.cpp">

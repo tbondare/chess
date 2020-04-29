@@ -6,6 +6,7 @@
 #include <memory>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -37,39 +38,45 @@ void ChessBoard::create()
     set_first_or_last_row(7);
 }
 
-void ChessBoard::print()
+string ChessBoard::print_to_string()
 {
-    cout << "            White" << endl;
-    cout << "   a  b  c  d  e  f  g  h" << endl;
-    cout << " ╔══╤══╤══╤══╤══╤══╤══╤══╗" << endl;
+    stringstream ss;
+    ss << "            White" << endl;
+    ss << "   a  b  c  d  e  f  g  h" << endl;
+    ss << " ╔══╤══╤══╤══╤══╤══╤══╤══╗" << endl;
     for (int i = 0; i < 8; ++i)
     {
-        cout << i + 1 << "║";
+        ss << i + 1 << "║";
         for (int j = 0; j < 8; ++j)
         {
             if (table[j][i].piece)
             {
-                table[j][i].color == WHITE ? cout << "W" : cout << "B";
-                cout << table[j][i].piece->get_letter();
+                table[j][i].color == WHITE ? ss << "W" : ss << "B";
+                ss << table[j][i].piece->get_letter();
             }
             else
-                cout << "  ";
+                ss << "  ";
             if (j == 7)
-                cout << "║" << i + 1 << endl;
+                ss << "║" << i + 1 << endl;
             else
-                cout << "│";
+                ss << "│";
         }
         if (i == 7)
-            cout << " ╚══╧══╧══╧══╧══╧══╧══╧══╝" << endl;
+            ss << " ╚══╧══╧══╧══╧══╧══╧══╧══╝" << endl;
         else
-            cout << " ╟──┼──┼──┼──┼──┼──┼──┼──╢" << endl;
+            ss << " ╟──┼──┼──┼──┼──┼──┼──┼──╢" << endl;
     }
-    cout << "   a  b  c  d  e  f  g  h" << endl;
-    cout << "            Black" << endl;
+    ss << "   a  b  c  d  e  f  g  h" << endl;
+    ss << "            Black" << endl;
     if (nextPlayer == BLACK)
-        cout << "BLACK's move next" << endl;
+        ss << "BLACK's move next" << endl;
     else
-        cout << "WHITE's move next" << endl;
+        ss << "WHITE's move next" << endl;
+    return (ss.str());
+}
+void ChessBoard::print()
+{
+    cout << print_to_string();
 }
 
 Color ChessBoard::check_whose_move()
@@ -201,6 +208,7 @@ void ChessBoard::create_clean_board()
     table.resize(8);
     for (int i = 0; i < 8; i++)
         table[i].resize(8);
+    nextPlayer = WHITE;
 }
 
 void  ChessBoard:: metamorfing_pawn(Coordinates coordinates)
@@ -290,4 +298,16 @@ void ChessBoard::load(string name)
     }
     file >> (int&)nextPlayer;
     file.close();
+}
+
+void ChessBoard::check_board(string boardForCheck)
+{
+    string board = print_to_string();
+    if (board != boardForCheck)
+    {
+        cout << "Expected" << endl << boardForCheck << endl;
+        cout << "Reality" << endl << board << endl << flush;
+        throw runtime_error("check board failed");
+    }
+
 }

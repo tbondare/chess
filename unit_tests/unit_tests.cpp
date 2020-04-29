@@ -4,11 +4,15 @@
 #include <iostream>
 using namespace std;
 
-void check_pawn();
+void test_pawn();
+void test_rook();
+void test_knight();
 
 int main()
 {
-    check_pawn();
+    test_pawn();
+    test_rook();
+    test_knight();
     return 0;
 }
 

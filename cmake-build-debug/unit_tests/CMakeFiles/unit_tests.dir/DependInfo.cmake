@@ -5,7 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tanya/CLionProjects/chess/chessboard.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.o"
+  "/home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/test_pawn.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_pawn.cpp.o"
+  "/home/tanya/CLionProjects/chess/unit_tests/test_rook.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_rook.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/unit_tests.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/unit_tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
