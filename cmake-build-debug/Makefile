@@ -48,10 +48,10 @@ RM = /home/tanya/Programs/clion-2019.2.5/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tanya/CLionProjects/chess_for_luxoft
+CMAKE_SOURCE_DIR = /home/tanya/CLionProjects/chess
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug
+CMAKE_BINARY_DIR = /home/tanya/CLionProjects/chess/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles /home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles /home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,111 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named chess_for_luxoft
+# Target rules for targets named chess
 
 # Build rule for target.
-chess_for_luxoft: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chess_for_luxoft
-.PHONY : chess_for_luxoft
+chess: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chess
+.PHONY : chess
 
 # fast build rule for target.
-chess_for_luxoft/fast:
-	$(MAKE) -f CMakeFiles/chess_for_luxoft.dir/build.make CMakeFiles/chess_for_luxoft.dir/build
-.PHONY : chess_for_luxoft/fast
+chess/fast:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/build
+.PHONY : chess/fast
+
+#=============================================================================
+# Target rules for targets named unit_tests
+
+# Build rule for target.
+unit_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unit_tests
+.PHONY : unit_tests
+
+# fast build rule for target.
+unit_tests/fast:
+	$(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/build
+.PHONY : unit_tests/fast
+
+Chessman.o: Chessman.cpp.o
+
+.PHONY : Chessman.o
+
+# target to build an object file
+Chessman.cpp.o:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Chessman.cpp.o
+.PHONY : Chessman.cpp.o
+
+Chessman.i: Chessman.cpp.i
+
+.PHONY : Chessman.i
+
+# target to preprocess a source file
+Chessman.cpp.i:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Chessman.cpp.i
+.PHONY : Chessman.cpp.i
+
+Chessman.s: Chessman.cpp.s
+
+.PHONY : Chessman.s
+
+# target to generate assembly for a file
+Chessman.cpp.s:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Chessman.cpp.s
+.PHONY : Chessman.cpp.s
+
+CommandInput.o: CommandInput.cpp.o
+
+.PHONY : CommandInput.o
+
+# target to build an object file
+CommandInput.cpp.o:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/CommandInput.cpp.o
+.PHONY : CommandInput.cpp.o
+
+CommandInput.i: CommandInput.cpp.i
+
+.PHONY : CommandInput.i
+
+# target to preprocess a source file
+CommandInput.cpp.i:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/CommandInput.cpp.i
+.PHONY : CommandInput.cpp.i
+
+CommandInput.s: CommandInput.cpp.s
+
+.PHONY : CommandInput.s
+
+# target to generate assembly for a file
+CommandInput.cpp.s:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/CommandInput.cpp.s
+.PHONY : CommandInput.cpp.s
+
+chessboard.o: chessboard.cpp.o
+
+.PHONY : chessboard.o
+
+# target to build an object file
+chessboard.cpp.o:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/chessboard.cpp.o
+.PHONY : chessboard.cpp.o
+
+chessboard.i: chessboard.cpp.i
+
+.PHONY : chessboard.i
+
+# target to preprocess a source file
+chessboard.cpp.i:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/chessboard.cpp.i
+.PHONY : chessboard.cpp.i
+
+chessboard.s: chessboard.cpp.s
+
+.PHONY : chessboard.s
+
+# target to generate assembly for a file
+chessboard.cpp.s:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/chessboard.cpp.s
+.PHONY : chessboard.cpp.s
 
 main.o: main.cpp.o
 
@@ -129,7 +223,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/chess_for_luxoft.dir/build.make CMakeFiles/chess_for_luxoft.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +232,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/chess_for_luxoft.dir/build.make CMakeFiles/chess_for_luxoft.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,8 +241,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/chess_for_luxoft.dir/build.make CMakeFiles/chess_for_luxoft.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+match.o: match.cpp.o
+
+.PHONY : match.o
+
+# target to build an object file
+match.cpp.o:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/match.cpp.o
+.PHONY : match.cpp.o
+
+match.i: match.cpp.i
+
+.PHONY : match.i
+
+# target to preprocess a source file
+match.cpp.i:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/match.cpp.i
+.PHONY : match.cpp.i
+
+match.s: match.cpp.s
+
+.PHONY : match.s
+
+# target to generate assembly for a file
+match.cpp.s:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/match.cpp.s
+.PHONY : match.cpp.s
 
 # Help Target
 help:
@@ -157,11 +278,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... chess_for_luxoft"
+	@echo "... chess"
 	@echo "... edit_cache"
+	@echo "... unit_tests"
+	@echo "... Chessman.o"
+	@echo "... Chessman.i"
+	@echo "... Chessman.s"
+	@echo "... CommandInput.o"
+	@echo "... CommandInput.i"
+	@echo "... CommandInput.s"
+	@echo "... chessboard.o"
+	@echo "... chessboard.i"
+	@echo "... chessboard.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... match.o"
+	@echo "... match.i"
+	@echo "... match.s"
 .PHONY : help
 
 

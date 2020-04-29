@@ -1,3 +1,6 @@
-/home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/chess_for_luxoft.dir
-/home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir
+/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/rebuild_cache.dir
+/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir
+/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/edit_cache.dir

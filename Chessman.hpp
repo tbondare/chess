@@ -10,22 +10,24 @@
 #include <iostream>
 
 using namespace std;
-enum MoveType {STEP, KILL, INVALID, SHAH, MATE};
+enum MoveType {STEP, KILL, INVALID, CASTLING_SHORT, CASTLING_LONG};
 
 class Chessman
 {
 public:
     virtual ~Chessman() = default;
-    virtual void print_letter() = 0;
+    virtual char get_letter() = 0;
     virtual MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) = 0;
+
+    bool wasMove = false;
 };
 
 class Rook : public Chessman
 {
 public:
-    void print_letter() override
+    char get_letter() override
     {
-        cout << 'R';
+        return ('R');
     }
     MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
     {
@@ -93,9 +95,9 @@ public:
 class Knight : public Chessman
 {
 public:
-    void print_letter() override
+    char get_letter() override
     {
-        cout << 'N';
+        return ('N');
     }
     MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
     {
@@ -118,9 +120,9 @@ public:
 class Bishop : public Chessman
 {
 public:
-    void print_letter() override
+    char get_letter() override
     {
-        cout << 'B';
+        return ('B');
     }
     MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
     {
@@ -181,9 +183,9 @@ public:
 class King : public Chessman
 {
 public:
-    void print_letter() override
+    char get_letter() override
     {
-        cout << 'K';
+        return 'K';
     }
     MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
     {
@@ -191,6 +193,24 @@ public:
         auto& cellTo = table[coordinates.to_x][coordinates.to_y];
         int stepX = coordinates.to_x - coordinates.from_x;
         int stepY = coordinates.to_y - coordinates.from_y;
+        if (stepX == 2 && !wasMove && table[7][coordinates.from_y].piece && !(table[7][coordinates.from_y].piece->wasMove))
+        {
+            if (table[5][coordinates.from_y].piece)
+                return INVALID;
+            if (table[6][coordinates.from_y].piece)
+                return INVALID;
+            return CASTLING_SHORT;
+        }
+        else if (stepX == -2 && !wasMove && table[0][coordinates.from_y].piece && !(table[0][coordinates.from_y].piece->wasMove))
+        {
+            if (table[1][coordinates.from_y].piece)
+                return INVALID;
+            if (table[2][coordinates.from_y].piece)
+                return INVALID;
+            if (table[3][coordinates.from_y].piece)
+                return INVALID;
+            return CASTLING_LONG;
+        }
         if (abs(stepX) != 1 || abs(stepY) != 1)
             return INVALID;
         if (cellTo.piece)
@@ -206,9 +226,9 @@ public:
 class Queen : public Chessman
 {
 public:
-    void print_letter() override
+    char get_letter() override
     {
-        cout << 'Q';
+        return 'Q';
     }
     MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
     {
@@ -324,9 +344,9 @@ public:
 class Pawn : public Chessman
 {
 public:
-    void print_letter() override
+    char get_letter() override
     {
-        cout << 'P';
+        return 'P';
     }
     MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
     {

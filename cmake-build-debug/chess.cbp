@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="chess"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\unit_tests\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/tanya/CLionProjects/chess/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/tanya/CLionProjects/chess/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chess">
+				<Option output="/home/tanya/CLionProjects/chess/cmake-build-debug/chess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tanya/CLionProjects/chess/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 chess"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chess/fast">
+				<Option output="/home/tanya/CLionProjects/chess/cmake-build-debug/chess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tanya/CLionProjects/chess/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 chess/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/tanya/CLionProjects/chess/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit_tests">
+				<Option output="/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/unit_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 unit_tests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unit_tests/fast">
+				<Option output="/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/unit_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 unit_tests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/tanya/CLionProjects/chess/Chessman.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/Chessman.hpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/CommandInput.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/CommandInput.hpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/Structures.hpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/chessboard.cpp">
+			<Option target="chess"/>
+			<Option target="unit_tests"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/chessboard.hpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/main.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/match.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/match.hpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/test_pawn.cpp">
+			<Option target="unit_tests"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/unit_tests.cpp">
+			<Option target="unit_tests"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unit_tests\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

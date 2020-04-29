@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/chess.dir/main.cpp.o CMakeFiles/chess.dir/chessboard.cpp.o CMakeFiles/chess.dir/match.cpp.o CMakeFiles/chess.dir/CommandInput.cpp.o CMakeFiles/chess.dir/Chessman.cpp.o  -o chess -lstdc++fs 

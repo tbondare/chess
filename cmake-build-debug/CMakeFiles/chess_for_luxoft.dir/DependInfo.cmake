@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/tanya/CLionProjects/chess_for_luxoft/main.cpp" "/home/tanya/CLionProjects/chess_for_luxoft/cmake-build-debug/CMakeFiles/chess_for_luxoft.dir/main.cpp.o"
+  "/home/tanya/CLionProjects/chess/main.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess_for_luxoft.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
