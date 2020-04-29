@@ -7,6 +7,18 @@ unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.o: ../Structures.hpp
 unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.o: ../chessboard.cpp
 unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.o: ../chessboard.hpp
 
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o: ../Chessman.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o: ../CommandInput.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o: ../Structures.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o: ../chessboard.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o: ../unit_tests/test_bishop.cpp
+
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o: ../Chessman.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o: ../CommandInput.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o: ../Structures.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o: ../chessboard.hpp
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o: ../unit_tests/test_king.cpp
+
 unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o: ../Chessman.hpp
 unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o: ../CommandInput.hpp
 unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o: ../Structures.hpp

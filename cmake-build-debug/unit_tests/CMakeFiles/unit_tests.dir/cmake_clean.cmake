@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/unit_tests.dir/__/chessboard.cpp.o"
+  "CMakeFiles/unit_tests.dir/test_bishop.cpp.o"
+  "CMakeFiles/unit_tests.dir/test_king.cpp.o"
   "CMakeFiles/unit_tests.dir/test_knight.cpp.o"
   "CMakeFiles/unit_tests.dir/test_pawn.cpp.o"
+  "CMakeFiles/unit_tests.dir/test_queen.cpp.o"
   "CMakeFiles/unit_tests.dir/test_rook.cpp.o"
   "CMakeFiles/unit_tests.dir/unit_tests.cpp.o"
   "unit_tests"

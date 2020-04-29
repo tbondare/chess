@@ -135,8 +135,8 @@ void ChessBoard::move(Coordinates coordinates)
             }
             cellTo.color = cellFrom.color;
             cellFrom.piece.swap(cellTo.piece);
-            table[0][coordinates.from_y].piece.swap(table[2][coordinates.from_y].piece);
-            table[2][coordinates.from_y].color = table[0][coordinates.from_y].color;
+            table[0][coordinates.from_y].piece.swap(table[3][coordinates.from_y].piece);
+            table[3][coordinates.from_y].color = table[0][coordinates.from_y].color;
         }
         if (check_shah())
         {
@@ -147,8 +147,8 @@ void ChessBoard::move(Coordinates coordinates)
             }
             else if (result == CASTLING_LONG)
             {
-                table[2][coordinates.from_y].piece.swap(table[0][coordinates.from_y].piece);
-                table[0][coordinates.from_y].color = table[2][coordinates.from_y].color;
+                table[3][coordinates.from_y].piece.swap(table[0][coordinates.from_y].piece);
+                table[0][coordinates.from_y].color = table[3][coordinates.from_y].color;
             }
             cellTo = memTo;
             cellFrom = memFrom;
@@ -165,6 +165,7 @@ void ChessBoard::move(Coordinates coordinates)
             nextPlayer = WHITE;
         else
             nextPlayer = BLACK;
+
         cellTo.piece->wasMove = true;
     }
     else
@@ -198,8 +199,8 @@ bool ChessBoard::check_shah()
                     return true;
             }
         }
-        return false;
     }
+    return false;
 }
 
 void ChessBoard::create_clean_board()

@@ -134,17 +134,21 @@ public:
             return INVALID;
         if (stepX < 0 && stepY < 0)
         {
+            int j = coordinates.from_y;
             for (int i = coordinates.from_x - 1; i > coordinates.to_x ; i--)
             {
-                if (table[i][i].piece)
+                j--;
+                if (table[i][j].piece)
                     return INVALID;
             }
         }
         else if (stepX > 0 && stepY > 0)
         {
+            int j = coordinates.from_y;
             for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
             {
-                if (table[i][i].piece)
+                j++;
+                if (table[i][j].piece)
                     return INVALID;
             }
         }
@@ -161,9 +165,9 @@ public:
         }
         else if (stepX < 0 && stepY > 0)
         {
-            for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
+            for (int j = coordinates.from_x - 1; j > coordinates.to_x ; j--)
             {
-                for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                for (int i = coordinates.from_y + 1; i < coordinates.to_y ; i++)
                 {
                     if (table[j][i].piece)
                         return INVALID;
@@ -211,15 +215,17 @@ public:
                 return INVALID;
             return CASTLING_LONG;
         }
-        if (abs(stepX) != 1 || abs(stepY) != 1)
-            return INVALID;
-        if (cellTo.piece)
+        if ((abs(stepX) == 1 && abs(stepY) == 1) || (abs(stepX) == 1 && stepY == 0) || (abs(stepY) == 1 && stepX == 0))
         {
-            if (cellTo.color == cellFrom.color)
-                return INVALID;
-            return KILL;
+            if (cellTo.piece)
+            {
+                if (cellTo.color == cellFrom.color)
+                    return INVALID;
+                return KILL;
+            }
+            return STEP;
         }
-        return STEP;
+        return INVALID;
     }
 };
 
@@ -240,17 +246,21 @@ public:
         {
             if (stepX < 0 && stepY < 0)
             {
+                int j = coordinates.from_y;
                 for (int i = coordinates.from_x - 1; i > coordinates.to_x ; i--)
                 {
-                    if (table[i][i].piece)
+                    j--;
+                    if (table[i][j].piece)
                         return INVALID;
                 }
             }
             else if (stepX > 0 && stepY > 0)
             {
+                int j = coordinates.from_y;
                 for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
                 {
-                    if (table[i][i].piece)
+                    j++;
+                    if (table[i][j].piece)
                         return INVALID;
                 }
             }
@@ -267,9 +277,9 @@ public:
             }
             else if (stepX < 0 && stepY > 0)
             {
-                for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
+                for (int j = coordinates.from_x - 1; j > coordinates.to_x ; j--)
                 {
-                    for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
+                    for (int i = coordinates.from_y + 1; i < coordinates.to_y ; i++)
                     {
                         if (table[j][i].piece)
                             return INVALID;

@@ -12,22 +12,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2643c437-a58f-480e-a0e2-448d15ac9c65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/unit_tests/test_knight.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unit_tests/test_rook.cpp" afterDir="false" />
+    <list default="true" id="2643c437-a58f-480e-a0e2-448d15ac9c65" name="Default Changelist" comment="all tests done">
+      <change afterPath="$PROJECT_DIR$/unit_tests/test_bishop.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit_tests/test_king.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit_tests/test_queen.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structures.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Structures.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chessman.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Chessman.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chessboard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/chessboard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chessboard.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/chessboard.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/chess.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/chess.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/chess.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/unit_tests/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/unit_tests/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/CXX.includecache" afterDir="false" />
@@ -42,7 +35,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/unit_tests/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/unit_tests/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/unit_tests/unit_tests" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/unit_tests/unit_tests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit_tests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_tests/test_pawn.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/test_pawn.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unit_tests/test_knight.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/test_knight.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit_tests/unit_tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_tests/unit_tests.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +60,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="OCResolveContextSettings">
-    <option name="configuration" value="0-chess" />
+    <option name="configuration" value="0-unit_tests" />
   </component>
   <component name="ProjectId" id="1aw6BeZtvmmyYSYrnIh7XnVHdZZ" />
   <component name="ProjectLevelVcsManager">
@@ -129,7 +122,7 @@
       <updated>1587634174315</updated>
       <workItem from="1587634176686" duration="599000" />
       <workItem from="1587636364624" duration="3630000" />
-      <workItem from="1587809987081" duration="86518000" />
+      <workItem from="1587809987081" duration="96232000" />
     </task>
     <task id="LOCAL-00001" summary="print chess board">
       <created>1587918370083</created>
@@ -159,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588160554826</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="some unit tests done">
+      <created>1588174123814</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588174123814</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +184,23 @@
     <MESSAGE value="step Pawn" />
     <MESSAGE value="go_all_chessman" />
     <MESSAGE value="all done. next unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="all done. next unit tests" />
+    <MESSAGE value="some unit tests done" />
+    <option name="LAST_COMMIT_MESSAGE" value="some unit tests done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/chessboard.cpp</url>
+          <line>176</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/chessboard.cpp</url>
+          <line>183</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -152,6 +152,60 @@ __/chessboard.cpp.s:
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.s
 .PHONY : __/chessboard.cpp.s
 
+test_bishop.o: test_bishop.cpp.o
+
+.PHONY : test_bishop.o
+
+# target to build an object file
+test_bishop.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o
+.PHONY : test_bishop.cpp.o
+
+test_bishop.i: test_bishop.cpp.i
+
+.PHONY : test_bishop.i
+
+# target to preprocess a source file
+test_bishop.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.i
+.PHONY : test_bishop.cpp.i
+
+test_bishop.s: test_bishop.cpp.s
+
+.PHONY : test_bishop.s
+
+# target to generate assembly for a file
+test_bishop.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.s
+.PHONY : test_bishop.cpp.s
+
+test_king.o: test_king.cpp.o
+
+.PHONY : test_king.o
+
+# target to build an object file
+test_king.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o
+.PHONY : test_king.cpp.o
+
+test_king.i: test_king.cpp.i
+
+.PHONY : test_king.i
+
+# target to preprocess a source file
+test_king.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.i
+.PHONY : test_king.cpp.i
+
+test_king.s: test_king.cpp.s
+
+.PHONY : test_king.s
+
+# target to generate assembly for a file
+test_king.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.s
+.PHONY : test_king.cpp.s
+
 test_knight.o: test_knight.cpp.o
 
 .PHONY : test_knight.o
@@ -205,6 +259,33 @@ test_pawn.s: test_pawn.cpp.s
 test_pawn.cpp.s:
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_pawn.cpp.s
 .PHONY : test_pawn.cpp.s
+
+test_queen.o: test_queen.cpp.o
+
+.PHONY : test_queen.o
+
+# target to build an object file
+test_queen.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.o
+.PHONY : test_queen.cpp.o
+
+test_queen.i: test_queen.cpp.i
+
+.PHONY : test_queen.i
+
+# target to preprocess a source file
+test_queen.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.i
+.PHONY : test_queen.cpp.i
+
+test_queen.s: test_queen.cpp.s
+
+.PHONY : test_queen.s
+
+# target to generate assembly for a file
+test_queen.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.s
+.PHONY : test_queen.cpp.s
 
 test_rook.o: test_rook.cpp.o
 
@@ -272,12 +353,21 @@ help:
 	@echo "... __/chessboard.o"
 	@echo "... __/chessboard.i"
 	@echo "... __/chessboard.s"
+	@echo "... test_bishop.o"
+	@echo "... test_bishop.i"
+	@echo "... test_bishop.s"
+	@echo "... test_king.o"
+	@echo "... test_king.i"
+	@echo "... test_king.s"
 	@echo "... test_knight.o"
 	@echo "... test_knight.i"
 	@echo "... test_knight.s"
 	@echo "... test_pawn.o"
 	@echo "... test_pawn.i"
 	@echo "... test_pawn.s"
+	@echo "... test_queen.o"
+	@echo "... test_queen.i"
+	@echo "... test_queen.s"
 	@echo "... test_rook.o"
 	@echo "... test_rook.i"
 	@echo "... test_rook.s"

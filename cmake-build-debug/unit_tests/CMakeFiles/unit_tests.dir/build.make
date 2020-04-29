@@ -122,13 +122,55 @@ unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_knight.cpp.s"
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp -o CMakeFiles/unit_tests.dir/test_knight.cpp.s
 
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o: unit_tests/CMakeFiles/unit_tests.dir/flags.make
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o: ../unit_tests/test_bishop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_bishop.cpp.o -c /home/tanya/CLionProjects/chess/unit_tests/test_bishop.cpp
+
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_bishop.cpp.i"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanya/CLionProjects/chess/unit_tests/test_bishop.cpp > CMakeFiles/unit_tests.dir/test_bishop.cpp.i
+
+unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_bishop.cpp.s"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanya/CLionProjects/chess/unit_tests/test_bishop.cpp -o CMakeFiles/unit_tests.dir/test_bishop.cpp.s
+
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o: unit_tests/CMakeFiles/unit_tests.dir/flags.make
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o: ../unit_tests/test_king.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_king.cpp.o -c /home/tanya/CLionProjects/chess/unit_tests/test_king.cpp
+
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_king.cpp.i"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanya/CLionProjects/chess/unit_tests/test_king.cpp > CMakeFiles/unit_tests.dir/test_king.cpp.i
+
+unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_king.cpp.s"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanya/CLionProjects/chess/unit_tests/test_king.cpp -o CMakeFiles/unit_tests.dir/test_king.cpp.s
+
+unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.o: unit_tests/CMakeFiles/unit_tests.dir/flags.make
+unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.o: ../unit_tests/test_queen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.o"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_queen.cpp.o -c /home/tanya/CLionProjects/chess/unit_tests/test_queen.cpp
+
+unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_queen.cpp.i"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tanya/CLionProjects/chess/unit_tests/test_queen.cpp > CMakeFiles/unit_tests.dir/test_queen.cpp.i
+
+unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_queen.cpp.s"
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tanya/CLionProjects/chess/unit_tests/test_queen.cpp -o CMakeFiles/unit_tests.dir/test_queen.cpp.s
+
 # Object files for target unit_tests
 unit_tests_OBJECTS = \
 "CMakeFiles/unit_tests.dir/unit_tests.cpp.o" \
 "CMakeFiles/unit_tests.dir/test_pawn.cpp.o" \
 "CMakeFiles/unit_tests.dir/__/chessboard.cpp.o" \
 "CMakeFiles/unit_tests.dir/test_rook.cpp.o" \
-"CMakeFiles/unit_tests.dir/test_knight.cpp.o"
+"CMakeFiles/unit_tests.dir/test_knight.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_bishop.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_king.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_queen.cpp.o"
 
 # External object files for target unit_tests
 unit_tests_EXTERNAL_OBJECTS =
@@ -138,9 +180,12 @@ unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/test_pawn.cpp.o
 unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.o
 unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/test_rook.cpp.o
 unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o
+unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o
+unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o
+unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.o
 unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/build.make
 unit_tests/unit_tests: unit_tests/CMakeFiles/unit_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable unit_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable unit_tests"
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unit_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
