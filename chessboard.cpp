@@ -84,7 +84,7 @@ Color ChessBoard::check_whose_move()
     return (nextPlayer);
 }
 
-void ChessBoard::move(Coordinates coordinates)
+bool ChessBoard::move(Coordinates coordinates)
 {
     auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
     auto& cellTo = table[coordinates.to_x][coordinates.to_y];
@@ -95,13 +95,13 @@ void ChessBoard::move(Coordinates coordinates)
         if (nextPlayer != cellFrom.color)
         {
             cout << "It is not valid color of chessman" << endl;
-            return;
+            return true;
         }
         auto result = cellFrom.piece->check_move(table, coordinates);
         if (result == INVALID)
         {
             cout << "It is not valid move" << endl;
-            return;
+            return true;
         }
         if (result == STEP)
         {
@@ -119,7 +119,7 @@ void ChessBoard::move(Coordinates coordinates)
             if (check_shah())
             {
                 cout << "Cannot do castling, because king is under shah" << endl;
-                return;
+                return true;
             }
             cellTo.color = cellFrom.color;
             cellFrom.piece.swap(cellTo.piece);
@@ -131,7 +131,7 @@ void ChessBoard::move(Coordinates coordinates)
             if (check_shah())
             {
                 cout << "Cannot do castling, because king is under shah" << endl;
-                return;
+                return true;
             }
             cellTo.color = cellFrom.color;
             cellFrom.piece.swap(cellTo.piece);
@@ -153,7 +153,7 @@ void ChessBoard::move(Coordinates coordinates)
             cellTo = memTo;
             cellFrom = memFrom;
             cout << "It is shah" << endl;
-            return;
+            return true;
         }
         if (memFrom.piece->get_letter() == 'P')
         {
@@ -165,16 +165,24 @@ void ChessBoard::move(Coordinates coordinates)
             nextPlayer = WHITE;
         else
             nextPlayer = BLACK;
-
+        if (check_shah())
+        {
+           if (check_mate())
+           {
+               cout << (nextPlayer == BLACK ? "WHITE" : "BLACK") << " win. Game over" << endl;
+               return false;
+           }
+        }
         cellTo.piece->wasMove = true;
     }
     else
         cout << "It is empty cell" << endl;
+    return true;
 }
 
-bool ChessBoard::check_shah()
+Coordinates ChessBoard::find_next_player_king(const vector <vector <Cell>>& table, Color nextPlayer)
 {
-    Coordinates coordinates;
+    Coordinates coordinates(-1, -1, -1, -1);
     for (int i = 0; i < 8; i++)
     {
         for (int j = 0; j < 8; j++)
@@ -187,11 +195,19 @@ bool ChessBoard::check_shah()
             }
         }
     }
+    return coordinates;
+}
+
+bool ChessBoard::check_shah_for_king(const vector <vector <Cell>>& table, Coordinates coordinates)
+{
+    if (coordinates.to_x < 0 || coordinates.to_x > 7 || coordinates.to_y < 0 || coordinates.to_y > 7)
+        return false;
     for (int i = 0; i < 8; i++)
     {
         for (int j = 0; j < 8; j++)
         {
-            if (table[i][j].piece && table[i][j].color != nextPlayer)
+            if (table[i][j].piece && table[coordinates.to_x][coordinates.to_y].piece
+                && table[i][j].color != table[coordinates.to_x][coordinates.to_y].color)
             {
                 coordinates.from_x = i;
                 coordinates.from_y = j;
@@ -201,6 +217,12 @@ bool ChessBoard::check_shah()
         }
     }
     return false;
+}
+
+bool ChessBoard::check_shah()
+{
+    Coordinates coordinates = find_next_player_king(table, nextPlayer);
+    return check_shah_for_king(table, coordinates);
 }
 
 void ChessBoard::create_clean_board()
@@ -311,4 +333,20 @@ void ChessBoard::check_board(string boardForCheck)
         throw runtime_error("check board failed");
     }
 
+}
+
+bool ChessBoard::check_mate()
+{
+    for (int i = 0; i < 8 ; ++i)
+    {
+        for (int j = 0; j < 8 ; ++j)
+        {
+            if (table[i][j].piece && nextPlayer == table[i][j].color)
+            {
+                if (!table[i][j].piece->check_mate(table, nextPlayer, i, j))
+                    return false;
+            }
+        }
+    }
+    return true;
 }

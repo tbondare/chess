@@ -17,8 +17,8 @@ class Chessman
 public:
     virtual ~Chessman() = default;
     virtual char get_letter() = 0;
-    virtual MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) = 0;
-
+    virtual MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) = 0;
+    virtual bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) = 0;
     bool wasMove = false;
 };
 
@@ -29,7 +29,7 @@ public:
     {
         return ('R');
     }
-    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) override
     {
         auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
         auto& cellTo = table[coordinates.to_x][coordinates.to_y];
@@ -90,6 +90,7 @@ public:
         else
             return INVALID;
     }
+    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override;
 };
 
 class Knight : public Chessman
@@ -99,7 +100,7 @@ public:
     {
         return ('N');
     }
-    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) override
     {
         auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
         auto& cellTo = table[coordinates.to_x][coordinates.to_y];
@@ -115,6 +116,7 @@ public:
         }
         return STEP;
     }
+    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
 };
 
 class Bishop : public Chessman
@@ -124,7 +126,7 @@ public:
     {
         return ('B');
     }
-    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) override
     {
         auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
         auto& cellTo = table[coordinates.to_x][coordinates.to_y];
@@ -182,6 +184,7 @@ public:
         }
         return STEP;
     }
+    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
 };
 
 class King : public Chessman
@@ -191,7 +194,7 @@ public:
     {
         return 'K';
     }
-    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) override
     {
         auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
         auto& cellTo = table[coordinates.to_x][coordinates.to_y];
@@ -227,6 +230,7 @@ public:
         }
         return INVALID;
     }
+    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
 };
 
 class Queen : public Chessman
@@ -236,7 +240,7 @@ public:
     {
         return 'Q';
     }
-    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) override
     {
         auto& cellFrom = table[coordinates.from_x][coordinates.from_y];
         auto& cellTo = table[coordinates.to_x][coordinates.to_y];
@@ -349,6 +353,7 @@ public:
         else
             return INVALID;
     }
+    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
 };
 
 class Pawn : public Chessman
@@ -358,7 +363,7 @@ public:
     {
         return 'P';
     }
-    MoveType check_move(vector <vector <Cell>>& table, Coordinates coordinates) override
+    MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) override
     {
         if (check_is_step_valid(table, coordinates))
             return STEP;
@@ -384,7 +389,7 @@ private:
             step = coordinates.to_y - coordinates.from_y;
         return step;
     }
-    bool check_is_step_valid(vector <vector <Cell>>& table, Coordinates coordinates)
+    bool check_is_step_valid(const vector <vector <Cell>>& table, Coordinates coordinates)
     {
         auto& cell = table[coordinates.from_x][coordinates.from_y];
         if (coordinates.from_x != coordinates.to_x)
@@ -409,7 +414,7 @@ private:
             return false;
         return true;
     }
-    bool check_is_kill_valid (vector <vector <Cell>>& table, Coordinates coordinates)
+    bool check_is_kill_valid (const vector <vector <Cell>>& table, Coordinates coordinates)
     {
         auto& cell = table[coordinates.from_x][coordinates.from_y];
         int stepLength_y = count_step_length(coordinates, cell.color);
@@ -422,6 +427,7 @@ private:
             return false;
         return !(cell.color == table[coordinates.to_x][coordinates.to_y].color);
     }
+    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
 };
 
 #endif //CHESS_CHESSMAN_HPP

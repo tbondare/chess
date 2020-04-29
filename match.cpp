@@ -38,8 +38,13 @@ void Match::run(CommandInput& commandInput)
     {
         if (currentCommand == MOVE)
         {
-            chessBoard.move(commandInput.get_coordinates());
-            chessBoard.print();
+            if (!chessBoard.move(commandInput.get_coordinates()))
+            {
+                chessBoard.print();
+                return;
+            }
+            else
+                chessBoard.print();
         }
         else if (currentCommand == SAVE)
         {
