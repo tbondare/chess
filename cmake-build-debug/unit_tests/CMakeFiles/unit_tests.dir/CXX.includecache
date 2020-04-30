@@ -36,7 +36,7 @@ CommandInput.hpp
 Structures.hpp
 /home/tanya/CLionProjects/chess/Structures.hpp
 
-/home/tanya/CLionProjects/chess/unit_tests/test_king.cpp
+/home/tanya/CLionProjects/chess/unit_tests/test_queen.cpp
 ../chessboard.hpp
 /home/tanya/CLionProjects/chess/chessboard.hpp
 

@@ -132,6 +132,7 @@
 		</Build>
 		<Unit filename="/home/tanya/CLionProjects/chess/Chessman.cpp">
 			<Option target="chess"/>
+			<Option target="unit_tests"/>
 		</Unit>
 		<Unit filename="/home/tanya/CLionProjects/chess/Chessman.hpp">
 			<Option target="chess"/>
@@ -141,6 +142,10 @@
 		</Unit>
 		<Unit filename="/home/tanya/CLionProjects/chess/CommandInput.hpp">
 			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/Structures.cpp">
+			<Option target="chess"/>
+			<Option target="unit_tests"/>
 		</Unit>
 		<Unit filename="/home/tanya/CLionProjects/chess/Structures.hpp">
 			<Option target="chess"/>
@@ -169,6 +174,9 @@
 		</Unit>
 		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp">
 			<Option target="chess"/>
+			<Option target="unit_tests"/>
+		</Unit>
+		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/test_mate.cpp">
 			<Option target="unit_tests"/>
 		</Unit>
 		<Unit filename="/home/tanya/CLionProjects/chess/unit_tests/test_pawn.cpp">

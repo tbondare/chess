@@ -5,10 +5,17 @@ CMakeFiles/chess.dir/Chessman.cpp.o: ../Chessman.cpp
 CMakeFiles/chess.dir/Chessman.cpp.o: ../Chessman.hpp
 CMakeFiles/chess.dir/Chessman.cpp.o: ../CommandInput.hpp
 CMakeFiles/chess.dir/Chessman.cpp.o: ../Structures.hpp
+CMakeFiles/chess.dir/Chessman.cpp.o: ../chessboard.hpp
 
 CMakeFiles/chess.dir/CommandInput.cpp.o: ../CommandInput.cpp
 CMakeFiles/chess.dir/CommandInput.cpp.o: ../CommandInput.hpp
 CMakeFiles/chess.dir/CommandInput.cpp.o: ../Structures.hpp
+
+CMakeFiles/chess.dir/Structures.cpp.o: ../Chessman.hpp
+CMakeFiles/chess.dir/Structures.cpp.o: ../CommandInput.hpp
+CMakeFiles/chess.dir/Structures.cpp.o: ../Structures.cpp
+CMakeFiles/chess.dir/Structures.cpp.o: ../Structures.hpp
+CMakeFiles/chess.dir/Structures.cpp.o: ../chessboard.hpp
 
 CMakeFiles/chess.dir/chessboard.cpp.o: ../Chessman.hpp
 CMakeFiles/chess.dir/chessboard.cpp.o: ../CommandInput.hpp
@@ -29,4 +36,10 @@ CMakeFiles/chess.dir/match.cpp.o: ../Structures.hpp
 CMakeFiles/chess.dir/match.cpp.o: ../chessboard.hpp
 CMakeFiles/chess.dir/match.cpp.o: ../match.cpp
 CMakeFiles/chess.dir/match.cpp.o: ../match.hpp
+
+CMakeFiles/chess.dir/unit_tests/test_knight.cpp.o: ../Chessman.hpp
+CMakeFiles/chess.dir/unit_tests/test_knight.cpp.o: ../CommandInput.hpp
+CMakeFiles/chess.dir/unit_tests/test_knight.cpp.o: ../Structures.hpp
+CMakeFiles/chess.dir/unit_tests/test_knight.cpp.o: ../chessboard.hpp
+CMakeFiles/chess.dir/unit_tests/test_knight.cpp.o: ../unit_tests/test_knight.cpp
 

@@ -7,4 +7,5 @@ add_executable(unit_tests
         test_knight.cpp
         test_bishop.cpp
         test_king.cpp
-        test_queen.cpp)
+        test_queen.cpp
+        ../Structures.cpp test_mate.cpp)

@@ -18,7 +18,7 @@ public:
     virtual ~Chessman() = default;
     virtual char get_letter() = 0;
     virtual MoveType check_move(const vector <vector <Cell>>& table, Coordinates coordinates) = 0;
-    virtual bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) = 0;
+    virtual bool check_mate(CheckMateData& checkMateData) = 0;
     bool wasMove = false;
 };
 
@@ -90,7 +90,7 @@ public:
         else
             return INVALID;
     }
-    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override;
+    bool check_mate(CheckMateData& checkMateData) override;
 };
 
 class Knight : public Chessman
@@ -116,7 +116,7 @@ public:
         }
         return STEP;
     }
-    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
+    bool check_mate(CheckMateData& checkMateData) override;
 };
 
 class Bishop : public Chessman
@@ -156,24 +156,22 @@ public:
         }
         else if (stepX > 0 && stepY < 0)
         {
+            int j = coordinates.from_y - 1;
             for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
             {
-                for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
-                {
-                    if (table[i][j].piece)
-                        return INVALID;
-                }
+                if (table[i][j].piece)
+                    return INVALID;
+                j--;
             }
         }
         else if (stepX < 0 && stepY > 0)
         {
+            int i = coordinates.from_y + 1;
             for (int j = coordinates.from_x - 1; j > coordinates.to_x ; j--)
             {
-                for (int i = coordinates.from_y + 1; i < coordinates.to_y ; i++)
-                {
-                    if (table[j][i].piece)
-                        return INVALID;
-                }
+                if (table[j][i].piece)
+                    return INVALID;
+                i++;
             }
         }
         if (cellTo.piece)
@@ -184,7 +182,7 @@ public:
         }
         return STEP;
     }
-    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
+    bool check_mate(CheckMateData& checkMateData) override;
 };
 
 class King : public Chessman
@@ -230,7 +228,7 @@ public:
         }
         return INVALID;
     }
-    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
+    bool check_mate(CheckMateData& checkMateData) override;
 };
 
 class Queen : public Chessman
@@ -270,24 +268,22 @@ public:
             }
             else if (stepX > 0 && stepY < 0)
             {
+                int j = coordinates.from_y - 1;
                 for (int i = coordinates.from_x + 1; i < coordinates.to_x ; i++)
                 {
-                    for (int j = coordinates.from_y - 1; j > coordinates.to_y ; j--)
-                    {
-                        if (table[i][j].piece)
-                            return INVALID;
-                    }
+                    if (table[i][j].piece)
+                        return INVALID;
+                    j--;
                 }
             }
             else if (stepX < 0 && stepY > 0)
             {
+                int i = coordinates.from_y + 1;
                 for (int j = coordinates.from_x - 1; j > coordinates.to_x ; j--)
                 {
-                    for (int i = coordinates.from_y + 1; i < coordinates.to_y ; i++)
-                    {
-                        if (table[j][i].piece)
-                            return INVALID;
-                    }
+                    if (table[j][i].piece)
+                        return INVALID;
+                    i++;
                 }
             }
             if (cellTo.piece)
@@ -353,7 +349,7 @@ public:
         else
             return INVALID;
     }
-    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
+    bool check_mate(CheckMateData& checkMateData) override;
 };
 
 class Pawn : public Chessman
@@ -371,6 +367,7 @@ public:
             return KILL;
         return INVALID;
     }
+    bool check_mate(CheckMateData& checkMateData) override;
 
 private:
     bool check_is_first_position(Color color, Coordinates coordinates)
@@ -427,7 +424,6 @@ private:
             return false;
         return !(cell.color == table[coordinates.to_x][coordinates.to_y].color);
     }
-    bool check_mate(const vector <vector <Cell>>& table, Color nextPlayer, int x, int y) override{}
 };
 
 #endif //CHESS_CHESSMAN_HPP

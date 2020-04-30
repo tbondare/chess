@@ -47,5 +47,43 @@ struct Coordinates
     int to_y;
 };
 
+enum CheckMateResult {NOMATE, BREAK, CONTINUE};
+
+struct CheckMateData
+{
+    const vector <vector <Cell>>& table;
+    vector <vector <Cell>> tableCopy;
+    Color nextPlayer;
+    Coordinates kingCoordinates;
+    int pieceX;
+    int pieceY;
+
+    const Cell& get_piece_cell()
+    {
+        return table[pieceX][pieceY];
+    }
+
+    void kill(int x, int y)
+    {
+        tableCopy[x][y] = get_piece_cell();
+        tableCopy[pieceX][pieceY].piece = nullptr;
+    }
+
+    void step(int x, int y)
+    {
+        tableCopy[x][y] = get_piece_cell();
+        tableCopy[pieceX][pieceY].piece = nullptr;
+    }
+
+    void move_undo(int x, int y)
+    {
+        tableCopy[x][y] = table[x][y];
+        tableCopy[pieceX][pieceY] = table[pieceX][pieceY];
+    }
+
+    CheckMateResult check_mate(int i, int j);
+    CheckMateResult check_mate_for_king(int i, int j);
+};
+
 #endif //CHESS_STRUCTURES_HPP
 

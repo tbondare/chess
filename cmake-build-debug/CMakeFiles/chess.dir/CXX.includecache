@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/tanya/CLionProjects/chess/Chessman.cpp
+Chessman.hpp
+/home/tanya/CLionProjects/chess/Chessman.hpp
+chessboard.hpp
+/home/tanya/CLionProjects/chess/chessboard.hpp
+
 /home/tanya/CLionProjects/chess/Chessman.hpp
 Structures.hpp
 /home/tanya/CLionProjects/chess/Structures.hpp
@@ -19,6 +25,12 @@ iostream
 -
 Structures.hpp
 /home/tanya/CLionProjects/chess/Structures.hpp
+
+/home/tanya/CLionProjects/chess/Structures.cpp
+Structures.hpp
+/home/tanya/CLionProjects/chess/Structures.hpp
+chessboard.hpp
+/home/tanya/CLionProjects/chess/chessboard.hpp
 
 /home/tanya/CLionProjects/chess/Structures.hpp
 vector
@@ -35,6 +47,8 @@ iostream
 -
 fstream
 -
+sstream
+-
 
 /home/tanya/CLionProjects/chess/chessboard.hpp
 iostream
@@ -45,4 +59,32 @@ CommandInput.hpp
 /home/tanya/CLionProjects/chess/CommandInput.hpp
 Structures.hpp
 /home/tanya/CLionProjects/chess/Structures.hpp
+
+/home/tanya/CLionProjects/chess/main.cpp
+iostream
+-
+match.hpp
+/home/tanya/CLionProjects/chess/match.hpp
+CommandInput.hpp
+/home/tanya/CLionProjects/chess/CommandInput.hpp
+
+/home/tanya/CLionProjects/chess/match.cpp
+match.hpp
+/home/tanya/CLionProjects/chess/match.hpp
+iostream
+-
+experimental/filesystem
+-
+CommandInput.hpp
+/home/tanya/CLionProjects/chess/CommandInput.hpp
+
+/home/tanya/CLionProjects/chess/match.hpp
+chessboard.hpp
+/home/tanya/CLionProjects/chess/chessboard.hpp
+CommandInput.hpp
+/home/tanya/CLionProjects/chess/CommandInput.hpp
+
+/home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp
+../chessboard.hpp
+/home/tanya/CLionProjects/chess/chessboard.hpp
 

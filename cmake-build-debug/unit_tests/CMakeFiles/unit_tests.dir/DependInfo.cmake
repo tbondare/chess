@@ -4,10 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/tanya/CLionProjects/chess/Chessman.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/__/Chessman.cpp.o"
+  "/home/tanya/CLionProjects/chess/Structures.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/__/Structures.cpp.o"
   "/home/tanya/CLionProjects/chess/chessboard.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/__/chessboard.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/test_bishop.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_bishop.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/test_king.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_king.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/test_knight.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.o"
+  "/home/tanya/CLionProjects/chess/unit_tests/test_mate.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_mate.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/test_pawn.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_pawn.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/test_queen.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_queen.cpp.o"
   "/home/tanya/CLionProjects/chess/unit_tests/test_rook.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/unit_tests/CMakeFiles/unit_tests.dir/test_rook.cpp.o"

@@ -337,13 +337,22 @@ void ChessBoard::check_board(string boardForCheck)
 
 bool ChessBoard::check_mate()
 {
+    vector <vector <Cell>> tableCopy;
+    tableCopy.resize(8);
+    for (int i = 0; i < 8 ; ++i)
+        tableCopy[i] = vector <Cell>(table[i]);
+    Coordinates kingCoordinates = find_next_player_king(table, nextPlayer);
+    CheckMateData checkMateData{table, tableCopy, nextPlayer, kingCoordinates, 0, 0};
+
     for (int i = 0; i < 8 ; ++i)
     {
         for (int j = 0; j < 8 ; ++j)
         {
             if (table[i][j].piece && nextPlayer == table[i][j].color)
             {
-                if (!table[i][j].piece->check_mate(table, nextPlayer, i, j))
+                checkMateData.pieceX = i;
+                checkMateData.pieceY = j;
+                if (!table[i][j].piece->check_mate(checkMateData))
                     return false;
             }
         }

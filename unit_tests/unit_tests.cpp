@@ -10,6 +10,7 @@ void test_knight();
 void test_bishop();
 void test_king();
 void test_queen();
+void test_mate();
 
 int main()
 {
@@ -19,5 +20,7 @@ int main()
     test_bishop();
     test_king();
     test_queen();
+    test_mate();
+    cout << "All tests were passed without errors." << endl;
     return 0;
 }

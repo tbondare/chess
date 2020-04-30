@@ -190,6 +190,33 @@ CommandInput.cpp.s:
 	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/CommandInput.cpp.s
 .PHONY : CommandInput.cpp.s
 
+Structures.o: Structures.cpp.o
+
+.PHONY : Structures.o
+
+# target to build an object file
+Structures.cpp.o:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Structures.cpp.o
+.PHONY : Structures.cpp.o
+
+Structures.i: Structures.cpp.i
+
+.PHONY : Structures.i
+
+# target to preprocess a source file
+Structures.cpp.i:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Structures.cpp.i
+.PHONY : Structures.cpp.i
+
+Structures.s: Structures.cpp.s
+
+.PHONY : Structures.s
+
+# target to generate assembly for a file
+Structures.cpp.s:
+	$(MAKE) -f CMakeFiles/chess.dir/build.make CMakeFiles/chess.dir/Structures.cpp.s
+.PHONY : Structures.cpp.s
+
 chessboard.o: chessboard.cpp.o
 
 .PHONY : chessboard.o
@@ -314,6 +341,9 @@ help:
 	@echo "... CommandInput.o"
 	@echo "... CommandInput.i"
 	@echo "... CommandInput.s"
+	@echo "... Structures.o"
+	@echo "... Structures.i"
+	@echo "... Structures.s"
 	@echo "... chessboard.o"
 	@echo "... chessboard.i"
 	@echo "... chessboard.s"

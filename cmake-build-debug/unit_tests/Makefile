@@ -125,6 +125,60 @@ unit_tests/fast:
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/build
 .PHONY : unit_tests/fast
 
+__/Chessman.o: __/Chessman.cpp.o
+
+.PHONY : __/Chessman.o
+
+# target to build an object file
+__/Chessman.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/Chessman.cpp.o
+.PHONY : __/Chessman.cpp.o
+
+__/Chessman.i: __/Chessman.cpp.i
+
+.PHONY : __/Chessman.i
+
+# target to preprocess a source file
+__/Chessman.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/Chessman.cpp.i
+.PHONY : __/Chessman.cpp.i
+
+__/Chessman.s: __/Chessman.cpp.s
+
+.PHONY : __/Chessman.s
+
+# target to generate assembly for a file
+__/Chessman.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/Chessman.cpp.s
+.PHONY : __/Chessman.cpp.s
+
+__/Structures.o: __/Structures.cpp.o
+
+.PHONY : __/Structures.o
+
+# target to build an object file
+__/Structures.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/Structures.cpp.o
+.PHONY : __/Structures.cpp.o
+
+__/Structures.i: __/Structures.cpp.i
+
+.PHONY : __/Structures.i
+
+# target to preprocess a source file
+__/Structures.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/Structures.cpp.i
+.PHONY : __/Structures.cpp.i
+
+__/Structures.s: __/Structures.cpp.s
+
+.PHONY : __/Structures.s
+
+# target to generate assembly for a file
+__/Structures.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/__/Structures.cpp.s
+.PHONY : __/Structures.cpp.s
+
 __/chessboard.o: __/chessboard.cpp.o
 
 .PHONY : __/chessboard.o
@@ -232,6 +286,33 @@ test_knight.s: test_knight.cpp.s
 test_knight.cpp.s:
 	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_knight.cpp.s
 .PHONY : test_knight.cpp.s
+
+test_mate.o: test_mate.cpp.o
+
+.PHONY : test_mate.o
+
+# target to build an object file
+test_mate.cpp.o:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_mate.cpp.o
+.PHONY : test_mate.cpp.o
+
+test_mate.i: test_mate.cpp.i
+
+.PHONY : test_mate.i
+
+# target to preprocess a source file
+test_mate.cpp.i:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_mate.cpp.i
+.PHONY : test_mate.cpp.i
+
+test_mate.s: test_mate.cpp.s
+
+.PHONY : test_mate.s
+
+# target to generate assembly for a file
+test_mate.cpp.s:
+	cd /home/tanya/CLionProjects/chess/cmake-build-debug && $(MAKE) -f unit_tests/CMakeFiles/unit_tests.dir/build.make unit_tests/CMakeFiles/unit_tests.dir/test_mate.cpp.s
+.PHONY : test_mate.cpp.s
 
 test_pawn.o: test_pawn.cpp.o
 
@@ -350,6 +431,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... unit_tests"
 	@echo "... edit_cache"
+	@echo "... __/Chessman.o"
+	@echo "... __/Chessman.i"
+	@echo "... __/Chessman.s"
+	@echo "... __/Structures.o"
+	@echo "... __/Structures.i"
+	@echo "... __/Structures.s"
 	@echo "... __/chessboard.o"
 	@echo "... __/chessboard.i"
 	@echo "... __/chessboard.s"
@@ -362,6 +449,9 @@ help:
 	@echo "... test_knight.o"
 	@echo "... test_knight.i"
 	@echo "... test_knight.s"
+	@echo "... test_mate.o"
+	@echo "... test_mate.i"
+	@echo "... test_mate.s"
 	@echo "... test_pawn.o"
 	@echo "... test_pawn.i"
 	@echo "... test_pawn.s"

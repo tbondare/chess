@@ -14,5 +14,5 @@ add_executable(chess
         Chessman.cpp
         Chessman.hpp
         Structures.hpp
-        unit_tests/test_knight.cpp)
+        unit_tests/test_knight.cpp Structures.cpp)
 target_link_libraries (chess stdc++fs)

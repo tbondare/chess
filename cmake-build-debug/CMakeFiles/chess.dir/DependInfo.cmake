@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/tanya/CLionProjects/chess/Chessman.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/Chessman.cpp.o"
   "/home/tanya/CLionProjects/chess/CommandInput.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/CommandInput.cpp.o"
+  "/home/tanya/CLionProjects/chess/Structures.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/Structures.cpp.o"
   "/home/tanya/CLionProjects/chess/chessboard.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/chessboard.cpp.o"
   "/home/tanya/CLionProjects/chess/main.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/main.cpp.o"
   "/home/tanya/CLionProjects/chess/match.cpp" "/home/tanya/CLionProjects/chess/cmake-build-debug/CMakeFiles/chess.dir/match.cpp.o"
